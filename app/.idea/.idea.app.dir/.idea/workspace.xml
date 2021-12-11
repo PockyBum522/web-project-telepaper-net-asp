@@ -6,8 +6,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c123714-5dd0-4b33-ae73-3f11e95ab0da" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Server.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.app.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.app.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,6 +15,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/126a70c991cfa98bfd869572a0bcaa7f1749972df73de5a443bf167a10c7e5/IPAddressParser.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -75,7 +76,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1639259537121</updated>
-      <workItem from="1639259544005" duration="875000" />
+      <workItem from="1639259544005" duration="1181000" />
     </task>
     <servers />
   </component>
