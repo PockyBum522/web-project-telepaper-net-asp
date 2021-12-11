@@ -6,7 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c123714-5dd0-4b33-ae73-3f11e95ab0da" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/global.json" beforeDir="false" afterPath="$PROJECT_DIR$/global.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +76,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1639259537121</updated>
-      <workItem from="1639259544005" duration="1181000" />
+      <workItem from="1639259544005" duration="1503000" />
     </task>
     <servers />
   </component>
