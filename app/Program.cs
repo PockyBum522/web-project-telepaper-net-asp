@@ -1,3 +1,5 @@
+using app;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -23,5 +25,15 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+Thread t = new Thread(delegate ()
+{
+  // replace the IP with your system IP Address...
+  Server myserver = new Server("192.168.***.***", 13000);
+});
+
+t.Start();
+
+Console.WriteLine("Server Started...!");
 
 app.Run();
