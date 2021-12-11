@@ -6,7 +6,59 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c123714-5dd0-4b33-ae73-3f11e95ab0da" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.app.dir/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/HomeController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/ErrorViewModel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Properties/launchSettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Startup.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Home/Index.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Home/Privacy.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Shared/Error.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Shared/_Layout.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Shared/_ValidationScriptsPartial.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/_ViewImports.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/_ViewStart.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/appsettings.Development.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/appsettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/css/site.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/js/site.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/lib/bootstrap/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/lib/bootstrap/dist/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/lib/bootstrap/dist/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/lib/jquery-validation/LICENSE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/lib/jquery-validation/dist/additional-methods.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/lib/jquery-validation/dist/additional-methods.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/lib/jquery-validation/dist/jquery.validate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/lib/jquery/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/lib/jquery/dist/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/lib/jquery/dist/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/lib/jquery/dist/jquery.min.map" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +128,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1639259537121</updated>
-      <workItem from="1639259544005" duration="3264000" />
+      <workItem from="1639259544005" duration="3610000" />
     </task>
     <servers />
   </component>
