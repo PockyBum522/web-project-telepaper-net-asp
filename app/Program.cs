@@ -7,10 +7,9 @@ using System.Threading;
 class Server
 {
     TcpListener server = null;
-    public Server(string ip, int port)
+    public Server(int port)
     {
-        IPAddress localAddr = IPAddress.Parse(ip);
-        server = new TcpListener(localAddr, port);
+        server = new TcpListener(IPAddress.Any, port);
         server.Start();
         StartListener();
     }
@@ -74,7 +73,7 @@ class Program
         Thread t = new Thread(delegate ()
         {
             // replace the IP with your system IP Address...
-            Server myserver = new Server("18.221.184.159", 8080);
+            Server myserver = new Server(8080);
         });
         t.Start();
         
