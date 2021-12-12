@@ -1,108 +1,83 @@
-﻿using System;
-using System.Net;
+﻿using System.Net;
 using System.Net.Sockets;
 using System.Text;
-using NetCoreServer;
 
-namespace TcpChatServer
+namespace TcpServerTest;
+
+class Server
 {
-    class ChatSession : TcpSession
+    TcpListener server = null;
+    public Server(string ip, int port)
     {
-        public ChatSession(TcpServer server) : base(server) {}
-
-        protected override void OnConnected()
-        {
-            Console.WriteLine($"Chat TCP session with Id {Id} connected!");
-
-            // Send invite message
-            string message = "Hello from TCP chat! Please send a message or '!' to disconnect the client!";
-            SendAsync(message);
-        }
-
-        protected override void OnDisconnected()
-        {
-            Console.WriteLine($"Chat TCP session with Id {Id} disconnected!");
-        }
-
-        protected override void OnReceived(byte[] buffer, long offset, long size)
-        {
-            string message = Encoding.UTF8.GetString(buffer, (int)offset, (int)size);
-            Console.WriteLine("Incoming: " + message);
-
-            // Multicast message to all connected sessions
-            Server.Multicast(message);
-
-            // If the buffer starts with '!' the disconnect the current session
-            if (message == "!")
-                Disconnect();
-        }
-
-        protected override void OnError(SocketError error)
-        {
-            Console.WriteLine($"Chat TCP session caught an error with code {error}");
-        }
+        IPAddress localAddr = IPAddress.Parse(ip);
+        server = new TcpListener(localAddr, port);
+        server.Start();
+        StartListener();
     }
 
-    class ChatServer : TcpServer
+    public void StartListener()
     {
-        public ChatServer(IPAddress address, int port) : base(address, port) {}
-
-        protected override TcpSession CreateSession() { return new ChatSession(this); }
-
-        protected override void OnError(SocketError error)
+        try
         {
-            Console.WriteLine($"Chat TCP server caught an error with code {error}");
-        }
-    }
-
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            // TCP server port
-            int port = 27000;
-            if (args.Length > 0)
-                port = int.Parse(args[0]);
-
-            Console.WriteLine($"TCP server port: {port}");
-
-            Console.WriteLine();
-
-            // Create a new TCP chat server
-            var server = new ChatServer(IPAddress.Any, port);
-
-            // Start the server
-            Console.Write("Server starting...");
-            server.Start();
-            Console.WriteLine("Done!");
-
-            Console.WriteLine("Press Enter to stop the server or '!' to restart the server...");
-
-            // Perform text input
-            for (;;)
+            while (true)
             {
-                string line = Console.ReadLine();
-                if (string.IsNullOrEmpty(line))
-                    break;
+                Console.WriteLine("Waiting for a connection...");
+                TcpClient client = server.AcceptTcpClient();
+                Console.WriteLine("Connected!");
 
-                // Restart the server
-                if (line == "!")
-                {
-                    Console.Write("Server restarting...");
-                    server.Restart();
-                    Console.WriteLine("Done!");
-                    continue;
-                }
-
-                // Multicast admin message to all sessions
-                line = "(admin) " + line;
-                server.Multicast(line);
+                Thread t = new Thread(new ParameterizedThreadStart(HandleDeivce));
+                t.Start(client);
             }
-
-            // Stop the server
-            Console.Write("Server stopping...");
-            server.Stop();
-            Console.WriteLine("Done!");
         }
+        catch (SocketException e)
+        {
+            Console.WriteLine("SocketException: {0}", e);
+            server.Stop();
+        }
+    }
+
+    public void HandleDeivce(Object obj)
+    {
+        TcpClient client = (TcpClient)obj;
+        var stream = client.GetStream();
+        string imei = String.Empty;
+
+        string data = null;
+        Byte[] bytes = new Byte[256];
+        int i;
+        try
+        {
+            while ((i = stream.Read(bytes, 0, bytes.Length)) != 0)
+            {
+                string hex = BitConverter.ToString(bytes);
+                data = Encoding.ASCII.GetString(bytes, 0, i);
+                Console.WriteLine("{1}: Received: {0}", data, Thread.CurrentThread.ManagedThreadId); 
+
+                string str = "Hey Device!";
+                Byte[] reply = System.Text.Encoding.ASCII.GetBytes(str);   
+                stream.Write(reply, 0, reply.Length);
+                Console.WriteLine("{1}: Sent: {0}", str, Thread.CurrentThread.ManagedThreadId);
+            }
+        }
+        catch(Exception e)
+        {
+            Console.WriteLine("Exception: {0}", e.ToString());
+            client.Close();
+        }
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Thread t = new Thread(delegate ()
+        {
+            // replace the IP with your system IP Address...
+            Server myserver = new Server("192.168.1.35", 8080);
+        });
+        t.Start();
+        
+        Console.WriteLine("Server Started...!");
     }
 }
